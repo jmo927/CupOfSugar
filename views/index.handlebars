@@ -1,33 +1,38 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<header>
+  <h2>Cup of Sugar</h2>
+  <div id="authentication">
+    <h4>Login</h4>
   </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+</header>
+
+<section>
+  <img src="../public/images/cupofSugarLogo.png" />
+
+  <h1>Bringing Neighbors Closer</h1>
+  <hr>
+  <br>
+  <br>
+  <div id="about">
+
+    <p>
+      Cup of Sugar helps you share household items with your neighbors! Need a cup of sugar? A favour? A lawnmower? A shovel? Ask your neighbors! <br><br>
+
+      You know what they say, you get as much as you give. Is that leafblower getting cobwebs? Does your lemon tree have too many lemons? Post an item or two you'd like to offer the community. 
+
+      <h3>Giving!</h3>
+      <br /><br />
+      SIGN UP to get started!
+    </p>
+
+  </div>
+
+  <div class="ui huge buttons">
+    <button class="ui button">Post an Item to Share</button>
+    <div class="or"></div>
+    <button class="ui button">Get an Item from Neighbors</button>
+  </div>
+
+</section>
+
+<footer></footer>

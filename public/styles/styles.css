@@ -1,3 +1,77 @@
-.list-group-item {
-  line-height: 2.5;
+/* ------------------------------
+GLOBAL 
+--------------------------------*/
+
+body{
+  background-image: url(https://chinimandi.com/wp-content/uploads/2018/07/sugar-2-1068x542.jpg);
+  background-size: cover;
+  font-family: 'Karla', sans-serif;
+}
+/* ------------------------------
+HEADER 
+--------------------------------*/
+
+header{
+  background-color: rgb(48, 47, 41);
+  color:gold;
+  margin-bottom:5%;
+  height:75px;
+}
+
+#authentication{
+  right:0px;
+  
+}
+/* ------------------------------
+SECTION 
+--------------------------------*/
+
+img{
+  height:100px;
+  margin:3% 0;
+}
+
+hr{
+  width:90%;
+  color:white;
+  margin-top:2%;
+  border:white 1px solid;
+}
+
+h1{
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+  font-weight:bolder;
+}
+
+section{
+  text-align:center;
+  width:80%;
+  margin-left:10%;
+  margin-right:10%;
+  background-color: rgb(226,207,166, .8);
+  border-radius:15px;
+  
+}
+section p{
+  padding:0 7%;
+}
+
+button{
+  width:17%;
+  height:40px;
+  margin:2% 2%;
+  border-radius:15px;
+}
+/* ------------------------------
+FOOTER 
+--------------------------------*/
+footer{
+background-color: rgb(48, 47, 41);
+height: 70px;
+position: fixed;
+width:100%;
+border-top: 3px rgb(0, 104, 168) solid;
+bottom: 0;
+
 }

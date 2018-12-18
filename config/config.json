@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "Squee!!!1",
-    "database": "exampledb",
+    "username": "crispycoder",
+    "password": "crispy",
+    "database": "cupofsugar_db",
     "host": "localhost",
     "dialect": "mysql"
   },

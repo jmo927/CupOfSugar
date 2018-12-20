@@ -15,10 +15,7 @@
     "logging": false
   },
   "production": {
-    "use_env_variable": "y06qcehxdtkegbeb.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "username": "ft0uy0vuj7l7im08",
-    "password":  "ne4l97701tt2rx9c",
-    "database": "b1aoquy99ze5hara"
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }

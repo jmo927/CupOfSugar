@@ -1,8 +1,14 @@
 {
   "development": {
+<<<<<<< Updated upstream
     "username": "crispycoder",
     "password": "crispy",
     "database": "cupofsugar_db",
+=======
+    "username": "root",
+    "password": "crispy",
+    "database": "exampledb",
+>>>>>>> Stashed changes
     "host": "localhost",
     "dialect": "mysql"
   },

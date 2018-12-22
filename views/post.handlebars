@@ -32,21 +32,22 @@
       <div id="section-gutter"> </div>
       <form method="get">
         <label>Item name:</label><br />
-        <input placeholder="Lawnmower, Shovel, Milk, Sugar! etc.."type="text" name="itemname" value="" /> <br /><br />
+        <input placeholder="Lawnmower, Shovel, Milk, Sugar! etc.."type="text" name="itemname" id="itemname" value="" /> <br /><br />
 
         <label>Condition:</label><br />
-        <input placeholder="Good, fair, poor, etc..." type="text" name="condition" value="" /> <br /><br />
+        <input placeholder="Good, fair, poor, etc..." type="text" name="condition" id="condition" value="" /> <br /><br />
 
-        <label>Phone Number:</label><br />
+        {{!-- <label>Phone Number:</label><br />
         <input placeholder="(xxx)-xxx-xxxx" type="text" name="phone" value="" /> <br /><br />
 
         <label>Email Address:</label><br />        
-        <input placeholder="neighbor@cupofsugar.com" type="text" name="email" value="" /> <br /><br />
+        <input placeholder="neighbor@cupofsugar.com" type="text" name="email" value="" /> <br /><br /> --}}
 
         <label for="msg">Message:</label><br>
-        <textarea placeholder="Special Instructions? Let your neighbor know!" id="msg" name="user_message"></textarea>
+        <textarea placeholder="Special Instructions? Let your neighbor know!" id="msg" name="user_message" id="user_message"></textarea>
 
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
       </form></div>
     </section>
+
    

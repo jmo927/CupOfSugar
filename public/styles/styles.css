@@ -8,6 +8,11 @@ body{
   background-size: cover;
   font-family: 'Karla', sans-serif;
 }
+/*! --------------------------------*/
+/*! ------------------------------*/
+/*! HOME PAGE */
+/*! --------------------------------*/
+/*! --------------------------------*/
 /* ------------------------------
 HEADER 
 --------------------------------*/
@@ -20,7 +25,7 @@ header{
   align-items: center;
 }
 header h2{
-margin-left:1%;
+margin-left:2%;
 }
 
 #authentication{
@@ -41,16 +46,28 @@ font-size:17px;
 /* ------------------------------
 SECTION 
 --------------------------------*/
+#section-home{
+  text-align:center;
+  width:70%;
+  margin: 5% 15%;
+  background-color: rgb(226,207,166, .8);
+  border-radius:15px;
+  padding:0 2%;
+  
+}
+
 
 img{
   height:250px;
-
+margin-top:3%;
 }
+
 a{
+  color:white;
   text-decoration: none;
 }
 hr{
-  width:90%;
+  width:80%;
   color:white;
   margin-top:2%;
   border:white 1px solid;
@@ -69,15 +86,7 @@ h2{
   font-weight:bolder;
 }
 
-section{
-  text-align:center;
-  width:80%;
-  margin: 5% 10%;
-  background-color: rgb(226,207,166, .8);
-  border-radius:15px;
-  padding-top:2%;
-  
-}
+
 section p{
   padding:0 7%;
   color:rgb(42,35,7);
@@ -117,4 +126,148 @@ button{
 
 img:hover{
   animation: bounce 1s;
+}
+
+
+/*! --------------------------------*/
+/*! ------------------------------*/
+/*! GET PAGE */
+/*! --------------------------------*/
+/*! --------------------------------*/
+
+/*! --------------------------------*/
+/*! ------------------------------*/
+/*! POST PAGE */
+/*! --------------------------------*/
+/*! --------------------------------*/
+#section-form{
+  /* text-align:center; */
+  width:70%;
+  margin: 5% 15%;
+  background-color: rgb(226,207,166, .8);
+  border-radius:15px;
+  padding-top:20px;
+  
+}
+#section-form-top{
+  text-align:center;
+  margin:1% 5%;
+}
+/* #section-form-logo{
+  width:20%;
+} */
+
+#section-form-logo img{
+height:250px;
+}
+
+
+#section-form-about{
+  width:80%;
+  margin:2% 10%;
+  /* padding-top:2%;
+  padding-bottom:2%;
+  padding-right:5%; */
+}
+
+#section-form-about h3{
+  padding:0 7%;
+  font-weight:bold;
+  font-size:30px;
+}
+#section-form-about p{
+  margin-top:2%;
+
+}
+
+#section-form-form{
+padding-bottom:75px;
+}
+
+#section-form-form hr{
+ width:70%;
+ border:blue;
+ height:200;
+}
+#section-gutter{
+  min-width:22%;
+}
+
+#section-form-top img{
+  height:175px;
+}
+
+form{
+  width:80%;
+  margin:2% 10%;
+}
+
+input{
+  width:100%;
+}
+
+textarea{
+  width:100%;
+  height:100px;
+}
+
+label{
+  font-size: 16px;
+  font-weight:bolder;
+  color:rgb(42,35,7);
+}
+
+form button{
+  float:right;
+  margin-right:0;
+}
+
+/* ----------------------
+Media Screen 980 
+------------------------- */
+
+@media screen and (max-width: 980px) {
+
+  header h2{
+    margin-left:4%;
+  }
+
+  #section-home{
+  padding-bottom:1%;
+}
+#section-home img{
+  margin-top:5%;
+  height:200px;
+}
+
+#section-home h1{
+  font-size:23px;
+}
+  button{
+display:block;
+width:50%;
+margin-left:25%;
+margin-right:25%;
+}
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+header h2{
+ display:static;
+ text-align:center;
+ margin-left:40%;
+}
+
+#section-home img{
+  margin-top:10%;
+  height:150px;
+}
+
+button{
+  width:60%;
+ margin: 7% 20%;
+}
 }

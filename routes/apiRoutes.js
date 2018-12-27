@@ -19,8 +19,13 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Favor.create(req.body).then(function(dbExample) {
+  app.post("/api/NewFavor", function(req, res) {
+
+    console.log(req.body);
+    let newFavor = req.body;
+    newFavor.UserId = 1;
+
+    db.Favor.create(newFavor).then(function(dbExample) {
       res.json(dbExample);
     });
   });

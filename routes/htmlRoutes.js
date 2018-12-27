@@ -11,7 +11,13 @@ module.exports = function(app) {
   });
   //get an item route
   app.get("/get", function(req, res) {
-    res.render("get");
+    db.Favor.findAll()
+      .then(function(result) {
+        console.log(result[0]);
+        res.render("get", {
+          AllFavors: result});
+      })
+    
   });
   // Load index page
   app.get("/", function(req, res) {

@@ -1,3 +1,53 @@
-{{#each AllFavors}}
-<h3>{{id}}: {{title}}</h3>
-{{/each}}
+<section id="allItems">
+    {{!-- <div id="section-form-top"> --}}
+        <img id="companyLogo" src="/images/cupofSugarFullLogo.png">
+        <div id="pageDetails">
+            <h3>Get to Sharing!</h3>
+            <br>
+            <p>
+                Reap the benefits of the community, scroll down to check out what your neighbors have offered to share
+                with you
+            </p>
+        </div>
+        <hr />
+        {{!--
+        {{#each AllFavors}}
+        <h3>{{id}}: {{title}}</h3>
+        {{/each}} --}}
+
+        <div class="card">
+            <img src="/images/templateItem.jpg" alt="template item" id="itemImg">
+
+            <div class="itemInfo">
+                <h4>
+                    Item Name | Condition: Almost New
+                </h4>
+                <p id="description">Recently purchased a lawn mower, there are a few scratches here and there but
+                    overall
+                    it works great!
+                    Super easy to use, it's available whenever, just send me a quick text or call at 123.456.7890 :)
+                    also
+                    maybe my username, address?? should be here? maybe?
+                </p>
+            </div>
+        </div>
+
+        {{!-- connecting modal --}}
+        <button id="modal-btn" class="button">Open Modal</button>
+
+        <div id="my-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+                    <p>TEXT.</p>
+                </div>
+                <div class="modal-footer">
+                    <h3>Modal Footer</h3>
+                </div>
+            </div>
+        </div>
+
+</section>

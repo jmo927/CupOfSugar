@@ -12,6 +12,11 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
         len: [1]
       },
+      imageURL: {
+        type: DataTypes.TEXT,
+        allowNull: false,
+        len: [1]
+      },
       hasBeenClaimed: {
         type: DataTypes.BOOLEAN,
         allowNull: false,

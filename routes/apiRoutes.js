@@ -21,9 +21,18 @@ module.exports = function(app) {
   // Create a new example
   app.post("/api/NewFavor", function(req, res) {
 
-    console.log(req.body);
     let newFavor = req.body;
+
+    //This should be updated to the User's actual ID
     newFavor.UserId = 1;
+
+    if (!newFavor.imageURL) {
+      console.log("add an image");
+      newFavor.imageURL = "test";
+    } 
+
+    console.log(newFavor.imageURL);
+
 
     db.Favor.create(newFavor).then(function(dbExample) {
       res.json(dbExample);

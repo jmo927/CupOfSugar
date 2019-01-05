@@ -21,8 +21,9 @@ module.exports = function(app) {
   // Create a new example
   app.post("/api/NewFavor", function(req, res) {
 
-    console.log(req.body);
     let newFavor = req.body;
+
+    //This should be updated to the User's actual ID
     newFavor.UserId = 1;
 
     db.Favor.create(newFavor).then(function(dbExample) {

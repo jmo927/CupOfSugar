@@ -11,12 +11,11 @@ module.exports = function(app) {
   });
   //get an item route
   app.get("/get", function(req, res) {
-    db.Favor.findAll()
-      .then(function(result) {
-        res.render("get", {
-          AllFavors: result});
-      })
-    
+    db.Favor.findAll().then(function(result) {
+      res.render("get", {
+        AllFavors: result
+      });
+    });
   });
   // Load index page
   app.get("/", function(req, res) {

@@ -28,7 +28,7 @@ module.exports = function(app) {
 
     if (!newFavor.imageURL) {
       console.log("add an image");
-      newFavor.imageURL = "test";
+      newFavor.imageURL = "./images/cupofSugar.png";
     } 
 
     console.log(newFavor.imageURL);
@@ -37,6 +37,19 @@ module.exports = function(app) {
     db.Favor.create(newFavor).then(function(dbExample) {
       res.json(dbExample);
     });
+  });
+
+  //Claim an Item
+  app.put("/api/posts", function(req, res) {
+    // db.Post.update(req.body,
+    //   {
+    //     where: {
+    //       id: req.body.id
+    //     }
+    //   })
+    //   .then(function(dbPost) {
+    //     res.json(dbPost);
+    //   });
   });
 
   // Delete an example by id

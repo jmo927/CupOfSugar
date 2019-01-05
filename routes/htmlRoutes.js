@@ -13,7 +13,6 @@ module.exports = function(app) {
   app.get("/get", function(req, res) {
     db.Favor.findAll()
       .then(function(result) {
-        console.log(result[0]);
         res.render("get", {
           AllFavors: result});
       })

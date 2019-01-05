@@ -107,7 +107,7 @@ let formSubmit = (event) => {
 
   let newFavor = {
     title: $("#itemname").val().trim(),
-    condition: $("#condition").val().trim(),
+    imageURL: $("#image-url").val().trim(),
     body: $("#msg").val()
   }
 

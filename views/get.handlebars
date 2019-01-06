@@ -1,50 +1,60 @@
-<section class = "sections" id="allItems">
+<section class="sections" id="allItems">
     {{!-- <div id="section-form-top"> --}}
         <img id="companyLogo" src="/images/cupofSugarFullLogo.png">
         <div id="pageDetails">
-            <h3>Get Something!</h3>
+            <h3>Get Favor!</h3>
             <br>
             <p>
-                Reap the benefits of the community, scroll down to check out what your neighbors have offered to share
-                with you
+                See what your community has to offer. Scroll down to see what your neighbors have to share
+                with you.
             </p>
         </div>
         <hr />
 
-       
 
-        <div class="card">
-            <img src="/images/templateItem.jpg" alt="template item" id="itemImg">
+        <div id="card-section">
+            <div class="card">
+                <img src="/images/templateItem.jpg" alt="template item" id="itemImg">
 
-            <div class="itemInfo">
-                <h4> Item Name: Lawnmower </h4> <br>
-                <br>
-                <p id="description">Recently purchased a lawn mower, there are a few scratches here and there but
-                    overall
-                    it works great!
-                    Super easy to use, it's available whenever, just send me a quick text or call at 123.456.7890 :)
-                    also
-                    maybe my username, address?? should be here? maybe?
-                </p>
+                <div class="itemInfo">
 
-                {{!-- CONTACT BUTTON  include some young curlys--}}
-                <button data-attr = "{{userID}}">Contact Me</button>
+                    <h4>Name:</h4>
+                    <h5>Ash Ketchup</h5><br>
+                    <h4>Item Name:</h4> 
+                    <h5>Lawnmower</h5>  <br>
+                
+                    <h4>Message:</h4>
+                    <p class="description">Recently purchased a lawn mower, there are a few scratches here and there but
+                        overall
+                        it works great!
+                        Super easy to use, it's available whenever, just send me a quick message.
+                    </p>
+
+                    {{!-- CONTACT BUTTON include some young curlys--}}
+                    <button>Contact Me</button>
+                </div>
             </div>
-        </div>
 
-         {{!-- UPDATE THIS --}}
-        
+
             {{#each AllFavors}}
             <div class="card">
-            <img src="{{imageURL}}">
-            <div class="itemInfo">
-            <h4>Item Name: {{title}}</h4><br>
-            <p class="description">{{body}}</p>
-            
-            <button>Contact Me</button>
-            
-            </div>
+                <img src="{{imageURL}}">
+                <div class="itemInfo">
+
+                {{!-- NEEDS TO BE UPDATED! --}}
+                    <h4>Name:</h4>
+                    <h5>{{}}</h5><br>
+
+                    <h4>Item Name:</h4>
+                    <h5>{{title}}</h5><br>
+                    
+                    <h4>Message:</h4>
+                    <p class="description">{{body}}</p>
+
+                    <button data-attr="{{userID}}">Contact Me</button>
+
+                </div>
             </div>
             {{/each}}
-
+        </div>
 </section>

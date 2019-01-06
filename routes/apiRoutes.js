@@ -23,8 +23,12 @@ module.exports = function(app) {
 
     let newFavor = req.body;
 
+    // newFavor.UserId = 1;
+
     //This should be updated to the User's actual ID
-    newFavor.UserId = 1;
+    if (!newFavor.userEmail) {
+      newFavor.userEmail = "me@mine.com";
+    }
 
     if (!newFavor.imageURL) {
       console.log("add an image");

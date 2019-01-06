@@ -57,13 +57,13 @@ module.exports = function (sequelize, DataTypes) {
           
     });
 
-    User.associate = function (models) {
-        // Associating User with Favors
-        // When an Author is deleted, also delete any associated Posts
-        User.hasMany(models.Favor, {
-            onDelete: "cascade"
-        });
-    };
+    // User.associate = function (models) {
+    //     // Associating User with Favors
+    //     // When an Author is deleted, also delete any associated Posts
+    //     User.hasMany(models.Favor, {
+    //         onDelete: "cascade"
+    //     });
+    // };
 
     return User;
 };

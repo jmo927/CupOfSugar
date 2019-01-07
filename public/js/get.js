@@ -24,3 +24,6 @@ function outsideClick(e) {
     modal.style.display = 'none';
   }
 }
+
+let contactButton = document.getElementsByClassName("contact-button");
+

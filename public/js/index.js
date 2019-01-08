@@ -100,27 +100,39 @@
 
 console.log("Page loaded");
 
-let formSubmit = (event) => {
-  event.preventDefault();
+const submitPost = $("#submit");
+const imageUrl = $("#image-url").trim().val();
+const validImg = false;
 
-  console.log("button clicked");
+if (imageUrl.endsWith(".jpg" || imageUrl.includes(".png"))) {
+    validImg === true;
+    submitPost.removeAttr("disabled");
 
-  let newFavor = {
-    title: $("#itemname").val().trim(),
-    imageURL: $("#image-url").val().trim(),
-    body: $("#msg").val()
-  }
+} else {
+    validImg === false;
+    $("image-url").css("border-color","red")
+};
 
-  $.ajax("/api/newFavor", {
-    type: "POST",
-    data: newFavor
-}).then(
-    function () {
-        console.log("created new favor");
-        // Reload the page to get the updated list
-        location.reload();
+const formSubmit = (event) => {
+    event.preventDefault();
+    console.log("button clicked");
+
+    let newFavor = {
+        title: $("#itemname").val().trim(),
+        imageURL: imageUrl,
+        body: $("#msg").val()
     }
-);
+
+    $.ajax("/api/newFavor", {
+        type: "POST",
+        data: newFavor
+    }).then(
+        function () {
+            console.log("created new favor");
+            // Reload the page to get the updated list
+            location.reload();
+        }
+    );
 
 }
 

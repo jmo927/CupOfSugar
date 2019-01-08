@@ -1,8 +1,28 @@
 var db = require("../models");
+var path = require("path");
+
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   //login route
+  // app.get("/login", function(req, res) {
+  //   res.render("login");
+  // });
+  app.get("/", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/members");
+    }
+    // res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.render("sign");
+  });
+
   app.get("/login", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("/members");
+    }
+    // res.sendFile(path.join(__dirname, "../public/login.html"));
     res.render("login");
   });
   //post an item route
@@ -17,6 +37,9 @@ module.exports = function(app) {
       });
     });
   });
+
+
+  /// ORIGINAL HTML ROUTES
   // Load index page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
@@ -41,5 +64,9 @@ module.exports = function(app) {
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");
+  });
+  app.get("/members", isAuthenticated, function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.render("index");
   });
 };

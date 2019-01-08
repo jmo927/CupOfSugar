@@ -207,13 +207,18 @@ button{
   margin:5%;
   text-align:center;
 }
+.itemInfo {
+  padding: 0 1rem;
+ height:45%;
+ position:relative;
+}
 
 .card button{
-  /* display:absolute; */
+  position:absolute;
   text-align:center;
   margin:auto 10%;
   margin-top:10%;
-  width:80%;
+  width:70%;
   bottom:15px;
 }
 
@@ -224,20 +229,17 @@ button{
   height:55%;
 }
 
+p.description{
+  max-width:100%;
+  word-wrap: break-word;
+}
+
 .itemImg {
   width: 100%;
   max-height:50%;
   border-radius: 5px 5px 0 0;
 }
 
-.itemInfo {
-  padding: 1rem;
- height:45%;
-}
-
-.contact-button{
-  bottom:5px;
-}
 
 .card:hover {
   box-shadow: 0 .5rem 2rem 0 rgba(0,0,0,0.9);

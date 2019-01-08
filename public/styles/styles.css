@@ -185,6 +185,12 @@ button{
  width:100px;
  /* margin-left: */
 }
+/* #companyLogo3 {
+  float:left;
+  width:100px;
+  margin-top:5%;
+  /* margin-left: */
+ 
 
 #pageDetails {
   text-align: center;
@@ -342,6 +348,41 @@ form button a{
   padding: 0 10%;
 }
 
+/*! --------------------------------*/
+/*! ------------------------------*/
+/*! SIGN IN AND LOGIN */
+/*! --------------------------------*/
+/*! --------------------------------*/
+
+#signHead{
+  margin-left:5%;
+  margin-right:5%;
+}
+
+#login-a{
+  color:white;
+}
+.signup{
+  margin-bottom:0;
+}
+
+.login{
+  margin-bottom:0;
+}
+
+#login{
+  padding:0 5%;
+}
+
+#form-group-2{
+  margin-top:15px;
+}
+
+/*! --------------------------------*/
+/*! ------------------------------*/
+/*! Media Queries */
+/*! --------------------------------*/
+/*! --------------------------------*/
 /* ----------------------
 Media Screen 980 
 ------------------------- */
@@ -417,6 +458,9 @@ header{
   height:150px; 
   display:flex;
   flex-direction: column;
+}
+#head-login{
+  height:75px;
 }
 
 

@@ -101,7 +101,7 @@
 console.log("Page loaded");
 
 const submitPost = $("#submit");
-const imageUrl = $("#image-url").trim().val();
+const imageUrl = $("#image-url").val().trim();
 const validImg = false;
 
 if (imageUrl.endsWith(".jpg" || imageUrl.includes(".png"))) {

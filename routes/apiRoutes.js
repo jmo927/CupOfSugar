@@ -20,7 +20,7 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/NewFavor", function(req, res) {
+  app.post("/api/newFavor", function(req, res) {
 
     let newFavor = req.body;
 

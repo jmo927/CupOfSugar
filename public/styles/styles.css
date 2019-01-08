@@ -128,9 +128,6 @@ button{
   font-size:14px;
 }
 
-
-
-
 @keyframes bounce {
 0%, 20%, 60%, 100% {
   -webkit-transform: translateY(0);
@@ -152,6 +149,13 @@ button{
   animation: bounce 1s;
 }
 
+#companyLogo {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:2%;
+  height:250px;
+}
 
 /*! --------------------------------*/
 /*! ------------------------------*/
@@ -159,13 +163,25 @@ button{
 /*! --------------------------------*/
 /*! --------------------------------*/
 
+#section-top{
+  margin: 0 5%;
+  /* margin-bottom:2%; */
+}
 
-#companyLogo {
-  display: block;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:2%;
-  height:250px;
+#section-top img{
+  margin-bottom:2%;
+}
+
+#section-about{
+  margin-left:7%;
+  padding-top:2%;
+}
+
+
+#companyLogo2 {
+ float:left;
+ width:100px;
+ /* margin-left: */
 }
 
 #pageDetails {
@@ -218,7 +234,7 @@ button{
   text-align:center;
   margin:auto 10%;
   margin-top:10%;
-  width:70%;
+  width:65%;
   bottom:15px;
 }
 
@@ -266,7 +282,7 @@ p.description{
   margin:2% 10%;
 }
 
-#section-form-about h3{
+#section-top h3{
   padding:0 7%;
   font-weight:bold;
   font-size:30px;
@@ -280,6 +296,7 @@ p.description{
 
 #section-form-form{
 padding-bottom:75px;
+margin:0;
 }
 
 #section-form-form hr{
@@ -293,8 +310,8 @@ padding-bottom:75px;
 }
 
 form{
-  width:80%;
-  margin:2% 10%;
+  width:90%;
+  margin:2% 5%;
 }
 
 input{

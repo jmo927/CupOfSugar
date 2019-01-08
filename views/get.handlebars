@@ -1,34 +1,40 @@
 <section class="sections" id="allItems">
-    {{!-- <div id="section-form-top"> --}}
-        <img id="companyLogo" src="/images/cupofSugarFullLogo.png">
-        <div id="pageDetails">
+
+    <div id="section-top">
+
+        <img id="companyLogo2" src="/images/cupofSugarFullLogo.png">
+
+        <div id="section-about">
             <h3>Get Favor!</h3>
             <br>
             <p>
                 See what the community has to offer. Scroll down to check out what your neighbors are sharing.
             </p>
         </div>
-        <hr />
-
-        <div id="card-section">
 
 
-            {{#each AllFavors}}
-            <div class="card">
-                <div class="image-container">
-                    <img class="itemImg" src="{{imageURL}}">
-                </div>
-                <div class="itemInfo">
-                    <h4>Item Name: </h4>
-                    <h5>{{title}}</h5><br>
-                    <h4>Message:</h4>
-                    <p class="description">{{body}}</p>
+    </div>
+    <hr />
 
-                    <button class="contact-button"><a>Contact Me</a></button>
+    <div id="card-section">
 
-                </div>
+
+        {{#each AllFavors}}
+        <div class="card">
+            <div class="image-container">
+                <img class="itemImg" src="{{imageURL}}">
             </div>
-            {{/each}}
+            <div class="itemInfo">
+                <h4>Item Name: </h4>
+                <h5>{{title}}</h5><br>
+                <h4>Message:</h4>
+                <p class="description">{{body}}</p>
+
+                <button class="contact-button"><a href="mailto:{{userEmail}}">Contact Me</a></button>
+
+            </div>
         </div>
+        {{/each}}
+    </div>
 
 </section>

@@ -21,19 +21,18 @@
     <div id="section-gutter"> </div>
     <form method="get">
       <label>Item name:</label><br />
-      <input placeholder="Lawnmower, Shovel, Milk, Sugar! etc.." type="text" name="itemname" id="itemname" value="" />
+      <input placeholder="Lawnmower, Shovel, Milk, Sugar! etc.." type="text" name="itemname" id="itemname" value="" required />
       <br /><br />
 
       <label>Image URL:</label><br />
-      <input placeholder="https://MyImage.jpg" type="text" name="image-url" id="image-url" value="" /> <br /><br />
+      <input placeholder="https://MyImage.jpg" type="text" name="image-url" id="image-url" value=""  /> <br /><br />
 
 
       <label for="msg">Message:</label><br>
-      <textarea placeholder="Special Instructions? Let your neighbor know!" id="msg" name="user_message" id="user_message"></textarea>
-<div id="form-buttons">
-      <button type="submit" id="submit">Submit and Post Again</button>
-      <button type="submit" id="submit-go"><a href="/get">Submit and Get Favor</a></button>
-      </div>
+
+      <textarea placeholder="Special Instructions? Let your neighbor know!" id="msg" name="user_message" id="user_message" required ></textarea>
+
+      <button type="submit" id="submit" disabled >Submit</button>
     </form>
   </div>
 </section>

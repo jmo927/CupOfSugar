@@ -21,11 +21,12 @@ module.exports = function(app) {
 
   // Create a new example
   app.post("/api/newFavor", function(req, res) {
+    console.log(req.user);
 
     let newFavor = req.body;
 
     // newFavor.UserId = 1;
-
+    newFavor.userEmail = req.user.email;
     //This should be updated to the User's actual ID
     if (!newFavor.userEmail) {
       newFavor.userEmail = "me@mine.com";

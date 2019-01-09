@@ -1,72 +1,12 @@
+// Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
 
 module.exports = function(app) {
-
-  // Ping Favors API
-  app.get("/api/favors", function(req, res) {
-    db.Favor.findAll()
-      .then(function(result) {
-        res.json(result);
-      })
-  });
-
-  //Ping Users API
-  app.get("/api/users", function(req, res) {
-    db.User.findAll()
-      .then(function(result) {
-        res.json(result);
-      })
-  });
-
-  // Create a new example
-  app.post("/api/newFavor", function(req, res) {
-
-    let newFavor = req.body;
-
-    // newFavor.UserId = 1;
-    newFavor.userEmail = req.user.email;
-    //This should be updated to the User's actual ID
-    if (!newFavor.userEmail) {
-      newFavor.userEmail = "me@mine.com";
-    }
-
-    if (!newFavor.imageURL) {
-      newFavor.imageURL = "./images/cupofSugar.png";
-    } 
-
-    db.Favor.create(newFavor).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
-
-  //Claim an Item
-  app.put("/api/posts", function(req, res) {
-    // db.Post.update(req.body,
-    //   {
-    //     where: {
-    //       id: req.body.id
-    //     }
-    //   })
-    //   .then(function(dbPost) {
-    //     res.json(dbPost);
-    //   });
-  });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(
-      dbExample
-    ) {
-      res.json(dbExample);
-    });
-  });
-
-
-  // some stuff
-  // about loggin in
-  // just copied from a working example
-
+  // Using the passport.authenticate middleware with our local strategy.
+  // If the user has valid login credentials, send them to the members page.
+  // Otherwise the user will be sent an error
+  
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will happen on the front end
@@ -78,6 +18,7 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
+    console.log(req.body);
     db.User.create({
       email: req.body.email,
       password: req.body.password

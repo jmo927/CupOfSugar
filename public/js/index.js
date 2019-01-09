@@ -103,15 +103,16 @@ console.log("Page loaded");
 const submitPost = $("#submit");
 const imageUrl = $("#image-url").val();
 const validImg = false;
+console.log(imageUrl);
 
-if (imageUrl.endsWith(".jpg" || imageUrl.includes(".png"))) {
-    validImg === true;
-    submitPost.removeAttr("disabled");
+// if (imageUrl.endsWith(".jpg" || imageUrl.includes(".png"))) {
+//     validImg === true;
+//     submitPost.removeAttr("disabled");
 
-} else {
-    validImg === false;
-    $("image-url").css("border-color","red")
-};
+// } else {
+//     validImg === false;
+//     $("image-url").css("border-color","red")
+// };
 
 const formSubmit = (event) => {
     event.preventDefault();
@@ -119,7 +120,7 @@ const formSubmit = (event) => {
 
     let newFavor = {
         title: $("#itemname").val().trim(),
-        imageURL: imageUrl,
+        imageURL: $("#image-url").val().trim(),
         body: $("#msg").val()
     }
 
@@ -127,10 +128,10 @@ const formSubmit = (event) => {
         type: "POST",
         data: newFavor
     }).then(
-        function () {
-            console.log("created new favor");
+        function (req, res) {
             // Reload the page to get the updated list
-            location.reload();
+            // location.reload();
+            location.assign("/get");
         }
     );
 

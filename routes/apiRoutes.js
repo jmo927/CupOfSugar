@@ -32,12 +32,14 @@ module.exports = function(app) {
       newFavor.userEmail = "me@mine.com";
     }
 
+    console.log(newFavor.imageURL);
+
     if (!newFavor.imageURL) {
       console.log("add an image");
       newFavor.imageURL = "./images/cupofSugar.png";
     } 
 
-    console.log(newFavor.imageURL);
+    // console.log(newFavor.imageURL);
 
 
     db.Favor.create(newFavor).then(function(dbExample) {

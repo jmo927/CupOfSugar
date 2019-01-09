@@ -1,33 +1,37 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<header id="head">
+    <h2><a href="/">Cup of Sugar</a></h2>
+
+  <div id="authentication">
+    <h4><a href="/get">Get Favor </a></h4>
+    <h4><a href="/post">Post Favor</a></h4>
+
   </div>
+</header>
+
+<section class="sections" id="section-home">
+  <div id="section-top">
+      <img id="companyLogo" src="/images/cupofSugarFullLogo.png">
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+  <h1>Bringing Neighbors Closer</h1>
+  </div>
+
+  <hr>
+  <br>
+  <br>
+  <div id="about">
+    <p>
+      Cup of Sugar helps you share household items with your neighbors! Need a cup of sugar? A lawnmower? A shovel?
+      Check with your neighbors! <br><br>
+
+      You know what they say, you get as much as you give. Post an item or two that you'd like to offer to the
+      community should they need it. Is that leafblower getting cobwebs? Share it! Neighbors are probably in need of it.
+      <br /><br />
+      Click below to get started!
+    </p>
+  </div>
+
+  <button> <a href="/post">Post an Item to Share</a></button>
+  <button> <a href="/get">Get an Item from Neighbors</a></button>
+</section>
+<script src="javascript.js"></script>
